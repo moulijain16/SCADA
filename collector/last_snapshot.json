@@ -1,0 +1,238 @@
+{
+  "timestamp": "2026-03-17 00:02:59",
+  "devices": {
+    "1.1.1.1": {
+      "hostname": "R1.localdomain",
+      "interfaces": [
+        "FastEthernet0/0",
+        "GigabitEthernet1/0",
+        "GigabitEthernet2/0",
+        "VoIP-Null0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "2.2.2.2": {
+      "hostname": "R2",
+      "interfaces": [
+        "FastEthernet0/0",
+        "GigabitEthernet1/0",
+        "GigabitEthernet2/0",
+        "VoIP-Null0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "3.3.3.3": {
+      "hostname": "R3",
+      "interfaces": [
+        "FastEthernet0/0",
+        "GigabitEthernet1/0",
+        "GigabitEthernet2/0",
+        "VoIP-Null0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "4.4.4.4": {
+      "hostname": "R4",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "5.5.5.5": {
+      "hostname": "R5",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "6.6.6.6": {
+      "hostname": "R6",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "7.7.7.7": {
+      "hostname": "R7",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1"
+      ]
+    },
+    "8.8.8.8": {
+      "hostname": "SWL1",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "9.9.9.9": {
+      "hostname": "SWL2",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "10.10.10.10": {
+      "hostname": "SWL3",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    "11.11.11.11": {
+      "hostname": "SWL4",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    }
+  },
+  "links": [
+    [
+      "R6",
+      "SWL3"
+    ],
+    [
+      "R5",
+      "SWL2"
+    ],
+    [
+      "R2",
+      "R4"
+    ],
+    [
+      "R7",
+      "SWL4"
+    ],
+    [
+      "R2",
+      "R5"
+    ],
+    [
+      "R4",
+      "SWL1"
+    ],
+    [
+      "R1",
+      "R3"
+    ],
+    [
+      "R3",
+      "R7"
+    ],
+    [
+      "R3",
+      "R6"
+    ],
+    [
+      "R1",
+      "R2"
+    ]
+  ],
+  "arp_entries": {
+    "1.1.1.1": [
+      "192.168.235.1",
+      "192.168.235.131",
+      "192.168.235.254",
+      "10.0.1.1",
+      "10.0.1.2",
+      "10.0.2.1",
+      "10.0.2.2"
+    ],
+    "2.2.2.2": [
+      "10.0.1.1",
+      "10.0.1.2",
+      "10.0.3.1",
+      "10.0.3.2",
+      "10.0.4.1",
+      "10.0.4.2"
+    ],
+    "3.3.3.3": [
+      "10.0.2.1",
+      "10.0.2.2",
+      "10.0.5.1",
+      "10.0.5.2",
+      "10.0.6.1",
+      "10.0.6.2"
+    ],
+    "4.4.4.4": [
+      "10.0.3.1",
+      "10.0.3.2",
+      "10.0.7.1",
+      "10.0.7.2"
+    ],
+    "5.5.5.5": [
+      "10.0.4.1",
+      "10.0.4.2",
+      "10.0.8.1",
+      "10.0.8.2"
+    ],
+    "6.6.6.6": [
+      "10.0.5.1",
+      "10.0.5.2",
+      "10.0.9.1",
+      "10.0.9.2"
+    ],
+    "7.7.7.7": [
+      "10.0.6.1",
+      "10.0.6.2",
+      "10.0.10.1",
+      "10.0.10.2"
+    ],
+    "8.8.8.8": [
+      "10.0.7.1",
+      "10.0.7.2"
+    ],
+    "9.9.9.9": [
+      "10.0.8.1",
+      "10.0.8.2"
+    ],
+    "10.10.10.10": [
+      "10.0.9.1",
+      "10.0.9.2"
+    ],
+    "11.11.11.11": [
+      "10.0.10.1",
+      "10.0.10.2"
+    ]
+  },
+  "alerts": [
+    {
+      "severity": "WARNING",
+      "type": "NEW_LINK",
+      "message": "New EIGRP link appeared: R7 \u2194 SWL4",
+      "link": [
+        "R7",
+        "SWL4"
+      ]
+    },
+    {
+      "severity": "WARNING",
+      "type": "NEW_ARP_ENTRY",
+      "message": "New ARP entry on SWL4: 10.0.10.2 appeared",
+      "device": "11.11.11.11",
+      "new_ip": "10.0.10.2"
+    },
+    {
+      "severity": "WARNING",
+      "type": "NEW_ARP_ENTRY",
+      "message": "New ARP entry on SWL4: 10.0.10.1 appeared",
+      "device": "11.11.11.11",
+      "new_ip": "10.0.10.1"
+    }
+  ]
+}

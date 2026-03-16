@@ -1,0 +1,223 @@
+{
+  "timestamp": "2026-03-17T00:37:26.591642",
+  "devices": [
+    {
+      "id": "R1",
+      "loopback_ip": "1.1.1.1",
+      "hostname": "R1",
+      "description": "Cisco IOS Software, 7200 Software (C7200-ADVENTERP",
+      "layer": "core",
+      "interfaces": [
+        "FastEthernet0/0",
+        "GigabitEthernet1/0",
+        "GigabitEthernet2/0",
+        "VoIP-Null0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "R2",
+      "loopback_ip": "2.2.2.2",
+      "hostname": "R2",
+      "description": "Cisco IOS Software, 7200 Software (C7200-ADVENTERP",
+      "layer": "distribution",
+      "interfaces": [
+        "FastEthernet0/0",
+        "GigabitEthernet1/0",
+        "GigabitEthernet2/0",
+        "VoIP-Null0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "R3",
+      "loopback_ip": "3.3.3.3",
+      "hostname": "R3",
+      "description": "Cisco IOS Software, 7200 Software (C7200-ADVENTERP",
+      "layer": "distribution",
+      "interfaces": [
+        "FastEthernet0/0",
+        "GigabitEthernet1/0",
+        "GigabitEthernet2/0",
+        "VoIP-Null0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "R4",
+      "loopback_ip": "4.4.4.4",
+      "hostname": "R4",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "dist-access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "R5",
+      "loopback_ip": "5.5.5.5",
+      "hostname": "R5",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "dist-access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "R6",
+      "loopback_ip": "6.6.6.6",
+      "hostname": "R6",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "dist-access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "R7",
+      "loopback_ip": "7.7.7.7",
+      "hostname": "R7",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "dist-access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "FastEthernet0/1",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "SWL1",
+      "loopback_ip": "8.8.8.8",
+      "hostname": "SWL1",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "SWL2",
+      "loopback_ip": "9.9.9.9",
+      "hostname": "SWL2",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "SWL3",
+      "loopback_ip": "10.10.10.10",
+      "hostname": "SWL3",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    },
+    {
+      "id": "SWL4",
+      "loopback_ip": "11.11.11.11",
+      "hostname": "SWL4",
+      "description": "Cisco IOS Software, 3700 Software (C3745-ADVENTERP",
+      "layer": "access",
+      "interfaces": [
+        "FastEthernet0/0",
+        "Null0",
+        "Loopback0"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "R1",
+      "to": "R3",
+      "interface": "GigabitEthernet2/0",
+      "protocol": "EIGRP",
+      "target_mac": "ca:03:0b:26:00:00"
+    },
+    {
+      "from": "R1",
+      "to": "R2",
+      "interface": "GigabitEthernet1/0",
+      "protocol": "EIGRP",
+      "target_mac": "ca:02:33:4f:00:00"
+    },
+    {
+      "from": "R2",
+      "to": "R4",
+      "interface": "GigabitEthernet1/0",
+      "protocol": "EIGRP",
+      "target_mac": "c4:04:48:5c:00:00"
+    },
+    {
+      "from": "R2",
+      "to": "R5",
+      "interface": "GigabitEthernet2/0",
+      "protocol": "EIGRP",
+      "target_mac": "c4:05:49:02:00:00"
+    },
+    {
+      "from": "R3",
+      "to": "R6",
+      "interface": "GigabitEthernet1/0",
+      "protocol": "EIGRP",
+      "target_mac": "c4:06:49:25:00:00"
+    },
+    {
+      "from": "R3",
+      "to": "R7",
+      "interface": "GigabitEthernet2/0",
+      "protocol": "EIGRP",
+      "target_mac": "c4:07:0b:49:00:00"
+    },
+    {
+      "from": "R4",
+      "to": "SWL1",
+      "interface": "FastEthernet0/1",
+      "protocol": "EIGRP",
+      "target_mac": "c4:08:4d:9c:00:00"
+    },
+    {
+      "from": "R5",
+      "to": "SWL2",
+      "interface": "FastEthernet0/1",
+      "protocol": "EIGRP",
+      "target_mac": "c4:09:4d:be:00:00"
+    },
+    {
+      "from": "R6",
+      "to": "SWL3",
+      "interface": "FastEthernet0/1",
+      "protocol": "EIGRP",
+      "target_mac": "c4:0a:4d:e3:00:00"
+    },
+    {
+      "from": "R7",
+      "to": "SWL4",
+      "interface": "FastEthernet0/1",
+      "protocol": "EIGRP",
+      "target_mac": "c4:0b:0b:96:00:00"
+    }
+  ],
+  "alerts": []
+}

@@ -1,4 +1,9 @@
-from pysnmp.hlapi import *
+from pysnmp.hlapi import (
+    getCmd, SnmpEngine, UsmUserData, UdpTransportTarget,
+    ContextData, ObjectType, ObjectIdentity,
+    usmHMACSHAAuthProtocol, usmAesCfb128Protocol,
+    usmDESPrivProtocol
+)
 
 def snmp_get(ip, oid, use_aes=True):
     if use_aes:
@@ -30,14 +35,14 @@ def snmp_get(ip, oid, use_aes=True):
         for varBind in varBinds:
             print(f"✅ {ip} - {varBind[1]}")
 
-# c7200 devices support AES
+# c7200 devices — SHA + AES
 c7200_devices = {
     '1.1.1.1': 'R1',
     '2.2.2.2': 'R2',
     '3.3.3.3': 'R3',
 }
 
-# c3745 devices only support DES
+# c3745 devices — SHA + DES
 c3745_devices = {
     '4.4.4.4': 'R4',
     '5.5.5.5': 'R5',
